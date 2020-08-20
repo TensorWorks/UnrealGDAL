@@ -1,0 +1,25 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "0.0.1",
+	"FriendlyName": "UnrealGDAL",
+	"Description": "Provides access to the GDAL/OGR API inside the Unreal Engine",
+	"Category": "Other",
+	"CreatedBy": "TensorWorks Pty Ltd",
+	"CreatedByURL": "https://tensorworks.com.au",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "UnrealGDAL",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": ["Linux", "Mac", "Win64"]
+		}
+	]
+}
