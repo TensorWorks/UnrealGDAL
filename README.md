@@ -12,6 +12,7 @@ This plugin uses [conan-ue4cli](https://github.com/adamrehn/conan-ue4cli) to bun
 - [Installation](#installation)
   - [Using release binaries](#using-release-binaries)
   - [Building everything from source](#building-everything-from-source)
+  - [Creating a binary distribution](#creating-a-binary-distribution)
 - [Usage](#usage)
 - [Legal](#legal)
 
@@ -37,6 +38,17 @@ To build the plugin from source without using the [precomputed dependency data](
 
 3. Once the Conan packages are built, you will be able to build or package any Unreal project which uses the UnrealGDAL plugin as normal.
 
+### Creating a binary distribution
+Once you have built the plugin from source following the steps above, you can create a binary distribution so that other members of your team can use the plugin without following the steps in [Building everything from source](#building-everything-from-source)
+
+1. Follow the steps listed in [Distributing projects and plugins](https://docs.adamrehn.com/conan-ue4cli/workflow/distribution).  For example:
+
+   ```bash
+   # Grab the binary dependencies from the conan cache and put them under the source directory.
+   ue4 conan precompute
+   ```
+
+2. Once the precomputed binary dependencies are included for GDAL (under the Source/GDAL directory), you can add the whole repository to a blank Unreal project under the Plugins directory, follow the steps to list the UnrealGDAL plugin as a dependency under [Usage](#usage) and build for the various configurations you want.  These are probably the "Development Editor", "Development" and "Shipping" configurations in Visual Studio.
 
 ## Usage
 
